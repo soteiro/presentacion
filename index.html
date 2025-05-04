@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            box-sizing: border-box;
+        }
+        .logo{
+            position: fixed;
+            width: 1100px;
+            height: auto;
+            right: 100px;
+            top: 100px;
+            z-index: 0;
+
+        }
+        .logo img{
+            width: 100%;
+        }
+        .slide {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            border: 1px solid red;
+
+        }
+        .slide img {
+            margin-top: 460px;
+            border-radius: 32px;
+            max-width: 80%;
+            max-height:80%;
+            width: auto;
+            height: auto;
+            /* border:1px solid red; */
+        }
+        .slide-number {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body > 
+    <div class="logo">
+        <img src="./img/fondo.jpg" alt="">
+    </div>
+    <div class="slide">
+        <img src="./img/title.png" alt="Título">
+        <div class="slide-number">1/6</div>
+    </div>
+    <div class="slide">
+        <img src="./img/1regla.png" alt="Regla 1">
+        <div class="slide-number">2/6</div>
+    </div>
+    <div class="slide">
+        <img src="./img/2regla.png" alt="Regla 2">
+        <div class="slide-number">3/6</div>
+    </div>
+    <div class="slide">
+        <img src="./img/3regla.png" alt="Regla 3">
+        <div class="slide-number">4/6</div>
+    </div>
+    <div class="slide">
+        <img src="./img/4regla.png" alt="Regla 4">
+        <div class="slide-number">5/6</div>
+    </div>
+    <div class="slide">
+        <img src="https://robohash.org/Regla 5" alt="Regla 4">
+        <div class="slide-number">5/6</div>
+    </div>
+    <div class="slide">
+        <img src="./img/5regla.png" alt="Regla 5">
+        <div class="slide-number">6/6</div>
+    </div>
+    <script>
+        // Prevenir el scroll normal y permitir solo el scroll por diapositiva
+        let isScrolling = false;
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function scrollToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                currentSlide = index;
+                window.scrollTo({
+                    top: index * 100 * window.innerHeight / 100,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        document.addEventListener('wheel', function(e) {
+            if (isScrolling) return;
+            
+            if (e.deltaY > 0 && currentSlide < totalSlides - 1) {
+                scrollToSlide(currentSlide + 1);
+            } else if (e.deltaY < 0 && currentSlide > 0) {
+                scrollToSlide(currentSlide - 1);
+            }
+            
+            isScrolling = true;
+            setTimeout(() => isScrolling = false, 500);
+        });
+
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            if (isScrolling) return;
+            
+            switch(e.key) {
+                case 'ArrowDown':
+                case ' ':
+                    e.preventDefault();
+                    if (currentSlide < totalSlides - 1) {
+                        scrollToSlide(currentSlide + 1);
+                    }
+                    break;
+                case 'ArrowUp':
+                case 'a':
+                    e.preventDefault();
+                    if (currentSlide > 0) {
+                        scrollToSlide(currentSlide - 1);
+                    }
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    if (currentSlide > 0) {
+                        scrollToSlide(currentSlide - 1);
+                    }
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    if (currentSlide < totalSlides - 1) {
+                        scrollToSlide(currentSlide + 1);
+                    }
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
