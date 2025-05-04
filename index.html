@@ -28,11 +28,9 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            border: 1px solid red;
-
         }
         .slide img {
-            margin-top: 460px;
+            margin-top: 316px;
             border-radius: 32px;
             max-width: 80%;
             max-height:80%;
@@ -47,6 +45,17 @@
             color: white;
             font-size: 2rem;
             opacity: 0.8;
+        }
+        .barra{
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .barra img{
+            width: 100%;
         }
     </style>
 </head>
@@ -82,6 +91,10 @@
         <img src="./img/5regla.png" alt="Regla 5">
         <div class="slide-number">6/6</div>
     </div>
+    <div class="barra">
+        <img src="./img/barra.jpg" alt="">
+    </div>
+
     <script>
         // Prevenir el scroll normal y permitir solo el scroll por diapositiva
         let isScrolling = false;
