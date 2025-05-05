@@ -5,11 +5,11 @@ html, body {
 }
 .logo{
     position: fixed;
-    width: 1100px;
+    width: 400px;
     height: auto;
-    right: 100px;
-    top: 100px;
-    z-index: 0;
+    right: 40px;
+    top: 20px;
+    z-index: -1;
 
 }
 .logo img{
@@ -22,10 +22,10 @@ html, body {
     justify-content: center;
 }
 .slide img {
-    margin-top: 316px;
-    border-radius: 32px;
+    margin-top: 100px;
+    border-radius: 10px;
     max-width: 80%;
-    max-height:80%;
+    max-height:75%;
     width: auto;
     height: auto;
     /* border:1px solid red; */
@@ -41,11 +41,12 @@ html, body {
 .barra{
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 52px;
     bottom: 0;
     left: 0;
     z-index: 0;
 }
 .barra img{
     width: 100%;
+    z-index: 10;
 }
