@@ -3,6 +3,7 @@
  let currentSlide = 0;
  const slides = document.querySelectorAll('.slide');
  const totalSlides = slides.length;
+ console.log(totalSlides);
 
  function scrollToSlide(index) {
      if (index >= 0 && index < totalSlides) {

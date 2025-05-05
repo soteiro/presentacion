@@ -21,6 +21,10 @@ html, body {
     display: flex;
     justify-content: center;
 }
+.historia{
+    display: flex;
+    flex-direction: column;
+}
 .slide img {
     margin-top: 100px;
     border-radius: 10px;
@@ -49,4 +53,46 @@ html, body {
 .barra img{
     width: 100%;
     z-index: 10;
+}
+
+.slide .historia {
+    background-color: #ffffff; /* Fondo blanco para claridad */
+    padding: 1rem; /* Espaciado interno amplio */
+    border-radius: 15px; /* Bordes redondeados más suaves */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    color: #333; /* Color de texto oscuro para contraste */
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+    line-height: 1.3; /* Espaciado entre líneas más amplio */
+    max-width: 70%; /* Limitar el ancho del contenido */
+    max-height: 70%;
+    margin-top: 100px;
+}
+
+.slide .historia h1 {
+    font-size: 2.5rem; /* Tamaño del título principal */
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+    color: #1a73e8; /* Color del título principal */
+    text-align: left; /* Centrar título */
+}
+
+.slide .historia h2 {
+    font-size: 1.8rem; /* Tamaño del subtítulo */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    color: #555; /* Color del subtítulo */
+    text-align: justify; /* Justificar subtítulo */
+}
+
+.slide .historia span {
+    display: block; /* Asegura que cada span ocupe una línea */
+    margin-bottom: 1rem; /* Espaciado entre spans */
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #444; /* Color del texto */
+}
+
+.slide .historia img {
+    display: block; /* Asegura que la imagen sea un bloque */
+    margin: 2rem auto; /* Centrar imagen y añadir espaciado */
+    max-width: 100%; /* Ajustar al ancho del contenedor */
+    height: auto; /* Mantener proporción */
+    border-radius: 10px; /* Bordes redondeados */
 }
