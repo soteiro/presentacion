@@ -43,7 +43,7 @@ html, body {
     flex-direction: column;
 }
 .slide img {
-    margin-top: 92px;
+    margin-top: 88px;
     border-radius: 10px;
     max-width: 80%;
     max-height:75%;
@@ -74,15 +74,15 @@ html, body {
 
 .slide .historia {
     background-color: #ffffff; /* Fondo blanco para claridad */
-    padding: 1rem; /* Espaciado interno amplio */
+    padding: 0.8rem; /* Espaciado interno amplio */
     border-radius: 15px; /* Bordes redondeados más suaves */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     color: #333; /* Color de texto oscuro para contraste */
     font-family: 'Arial', sans-serif; /* Fuente legible */
     line-height: 1.3; /* Espaciado entre líneas más amplio */
     max-width: 80%; /* Limitar el ancho del contenido */
-    max-height: 70%;
-    margin-top: 100px;
+    max-height: 72%;
+    margin-top: 50px;
 }
 
 .slide .historia h1 {
@@ -132,4 +132,47 @@ html, body {
     height: auto; /* Mantener la proporción de las imágenes */
     border-radius: 10px; /* Bordes redondeados para un diseño más atractivo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar las imágenes */
+}
+
+/* Estilos para la diapositiva final */
+.final-slide {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-slide h1 {
+    color: #005a9c;
+    margin-bottom: 0px 0px 30px 50px;
+    font-size: 2.5rem;
+}
+
+.final-slide .priority {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.final-slide .main-content {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.final-slide .action {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin: 25px 0;
+}
+
+.final-slide .footer-quote {
+    font-style: italic;
+    color: #3498db;
+    font-size: 1.2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 30px;
 }
