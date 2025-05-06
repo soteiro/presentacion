@@ -2,6 +2,7 @@ html, body {
     scroll-behavior: smooth;
     overflow-y: scroll;
     box-sizing: border-box;
+    background-color: #f5f5dc;
 }
 .logo{
     position: fixed;
@@ -9,7 +10,7 @@ html, body {
     height: auto;
     right: 40px;
     top: 20px;
-    z-index: -1;
+    z-index: 0;
 
 }
 .logo img{
@@ -109,7 +110,9 @@ html, body {
 }
 
 .slide .imagenes img {
-    max-width: 200px; /* Limitar el ancho máximo de cada imagen */
+    max-width: 420px; /* Incrementar el ancho máximo de cada imagen */
+    aspect-ratio: 4/3;
+    object-fit: fill;
     height: auto; /* Mantener la proporción de las imágenes */
     border-radius: 10px; /* Bordes redondeados para un diseño más atractivo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar las imágenes */
