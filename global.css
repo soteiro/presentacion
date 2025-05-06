@@ -37,6 +37,7 @@ html, body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    z-index: 1; /* Añadir z-index bajo para las diapositivas */
 }
 .historia{
     display: flex;
@@ -65,7 +66,7 @@ html, body {
     height: 52px;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: 9999; /* Mantener z-index alto para la barra */
 }
 .barra img{
     width: 100%;
@@ -81,8 +82,8 @@ html, body {
     font-family: 'Arial', sans-serif; /* Fuente legible */
     line-height: 1.3; /* Espaciado entre líneas más amplio */
     max-width: 80%; /* Limitar el ancho del contenido */
-    max-height: 72%;
-    margin-top: 50px;
+    max-height: 70%;
+    margin-top: 80px;
 }
 
 .slide .historia h1 {
@@ -130,7 +131,7 @@ html, body {
     aspect-ratio: 4/3;
     object-fit: fill;
     height: auto; /* Mantener la proporción de las imágenes */
-    border-radius: 10px; /* Bordes redondeados para un diseño más atractivo */
+    border-radius: 8px; /* Bordes redondeados para un diseño más atractivo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar las imágenes */
 }
 
@@ -142,7 +143,7 @@ html, body {
     margin: 0 auto;
 }
 
-.final-slide h1 {
+.final-slide .historia h1 {
     color: #005a9c;
     margin-bottom: 0px 0px 30px 50px;
     font-size: 2.5rem;
