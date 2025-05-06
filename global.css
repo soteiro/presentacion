@@ -26,7 +26,7 @@ html, body {
     flex-direction: column;
 }
 .slide img {
-    margin-top: 100px;
+    margin-top: 92px;
     border-radius: 10px;
     max-width: 80%;
     max-height:75%;
@@ -95,4 +95,22 @@ html, body {
     max-width: 100%; /* Ajustar al ancho del contenedor */
     height: auto; /* Mantener proporción */
     border-radius: 10px; /* Bordes redondeados */
+}
+
+.slide .imagenes {
+    display: flex; /* Usar flexbox para alinear las imágenes */
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten a la siguiente línea si es necesario */
+    justify-content: center; /* Centrar las imágenes horizontalmente */
+    align-items: center; /* Centrar las imágenes verticalmente */
+    gap: 1rem; /* Espaciado entre las imágenes */
+    padding: 1rem; /* Espaciado interno para evitar que las imágenes toquen los bordes */
+    max-width: 100%; /* Asegurar que no excedan el ancho del slide */
+    box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+}
+
+.slide .imagenes img {
+    max-width: 200px; /* Limitar el ancho máximo de cada imagen */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados para un diseño más atractivo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar las imágenes */
 }
